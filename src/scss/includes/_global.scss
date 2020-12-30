@@ -1,0 +1,58 @@
+.overflow--hidden{
+    overflow: hidden;
+}
+img{
+    max-width: 100%;
+}
+.page--title{
+    font-family: GothamMediumRegular;
+    font-size: 55px;
+    color: $main-color-dark;
+    span{
+        font-family: GothamBlackRegular;
+    }
+    &__line{
+        border-top: 7px solid $page-light-blue;
+        max-width: 100px;
+        margin-left: 0;
+        margin-top: 0;
+    }    
+    white-space: pre-line;
+}
+.text--content{
+    font-family: GothamMediumRegular;
+    font-size: 16px;
+    white-space: pre-line;
+}
+.white--line{
+    border-top: 3px solid #ffffff;
+}
+@media only screen and (min-width: 1800px) {
+    .container{
+        &--max{
+            max-width: 1655px;
+        }
+        &--medium{
+            max-width: 1540px;
+        }
+    }
+    .page--title{
+        font-size: 75px;
+        &__line{
+            border-top: 10px solid $page-light-blue;
+            max-width: 135px;
+        }
+    }
+    .text--content{
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .page--title{
+        font-size: 35px;
+        margin-top: 30px;
+    }
+    .text--content{
+        font-size: 14px;
+    }
+}

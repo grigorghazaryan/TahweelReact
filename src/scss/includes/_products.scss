@@ -1,0 +1,499 @@
+.slick-slide{
+    outline: none;
+    a{
+        &:focus{
+           outline: none;
+        }
+    }
+    
+}
+
+
+.products{
+    background-color: $bg-blue;
+    background-image: url("../img/Product/Texture.svg");
+    background-size: 100%;
+    .slick--slider--arrow{
+        bottom: 30px;
+        color: #fff;
+        z-index: 10;
+        background-color: $arrow-color;
+        border: 1px solid $arrow-color;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
+        height: fit-content;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        top: 0;
+        opacity: 1;
+        padding: 15px 15px;
+        min-height: 48px;
+        min-width: 48px;
+        position: absolute;
+        svg{
+            font-size: 16px;
+            path{
+                fill: #ffffff;
+            }
+        }
+        &.slick-next{
+            position: absolute;
+            bottom: 0;
+            top: 110%;
+            right: 0;
+            left: auto;
+            svg{
+                -webkit-transform: rotate(-90deg);
+                transform: rotate(-90deg);
+            }
+        } 
+        &.slick-prev{
+            position: absolute;
+            bottom: 0;
+            top: 110%;
+            right: 58px;
+            left: auto;
+            svg{
+                -webkit-transform: rotate(90deg);
+                transform: rotate(90deg);
+            }
+        } 
+        &::before{
+            content: none;
+        }
+        &:hover{
+            svg{
+                path{
+                    fill: $arrow-color;
+                }
+            }
+        }
+    }
+    .product--content{
+        padding-top: 160px;
+        padding-bottom: 120px;
+    }
+    .products--industries{
+        &__left {
+            &__title{
+                color: #333333;
+            }
+            &__line{
+                border-color: #005A80;
+                margin-top: 20px;
+            }
+            &__text{
+                line-height: 24px;
+            }
+            &__link{
+                color: #005A80;
+                margin-top: 84px;
+                display: inline-block;
+                &:hover{
+                    opacity: 0.5;
+                    text-decoration: none;
+                }
+            }
+        } 
+        &__right{
+            margin-top: 50px;
+            &__slider--content{
+                a{
+                    text-decoration: none!important;
+                }
+                &__title{
+                    text-align: center;
+                    color: $slider-product-color;
+                    text-decoration: none!important;
+                    opacity: 0;
+                    -moz-transition: opacity 1s;
+                    -ms-transition: opacity 1s;
+                    -o-transition: opacity 1s;
+                    transition: opacity 1s;
+                    -webkit-transition: opacity 1s;
+                }
+                :hover{
+                    p{
+                        opacity: 1;
+                        -moz-transition: opacity 1s;
+                        -ms-transition: opacity 1s;
+                        -o-transition: opacity 1s;
+                        transition: opacity 1s;
+                        -webkit-transition: opacity 1s;
+                    }
+                }
+            }
+            .slick-slide{
+                &:focus{
+                    outline: none;
+                }
+                &>div{
+                    &:focus{
+                        outline: none;
+                    }
+                }
+            }
+            .product--slider--hover{
+                &:focus{
+                    outline: none;
+                }
+                &:hover{
+                    .product--slider--hover__img::before{     
+                            content: '';                       
+                            opacity: 0;
+                            -moz-transition: opacity 1s;
+                            -ms-transition: opacity 1s;
+                            -o-transition: opacity 1s;
+                            transition: opacity 1s;
+                            -webkit-transition: opacity 1s;
+                        }
+                    }
+                &__img{
+                    position: relative;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        background: rgba(0, 90, 128, 0.65);
+                        height: 100%;
+                        width: 100%;
+                        opacity: 1;
+                        -moz-transition: opacity 1s;
+                        -ms-transition: opacity 1s;
+                        -o-transition: opacity 1s;
+                        transition: opacity 1s;
+                        -webkit-transition: opacity 1s;
+                    }
+                    &::after{
+                        content: '';
+                        height: 61px;
+                        border-left: 14px solid $slider-product-color;
+                        position: absolute;
+                        top: 30px;
+                        left: 0;
+                    }
+                
+                }
+            }
+        }
+        .slick--slider--arrow{
+            background-color: #005A80;
+            border: 1px solid #005A80;
+            &:hover{
+                background-color: transparent;
+                svg{
+                    path{
+                        fill: #005A80;
+                    }
+                }
+            }
+        }
+    }
+
+    .products--packaging{
+        &__left {
+            &__line{
+                border-color: #50B7E0;
+            }
+            &__link{
+                color:#50B7E0;
+            }
+        }
+        .slick--slider--arrow{
+            background-color: #50B7E0;
+            border: 1px solid #50B7E0;
+            &:hover{
+                background-color: transparent;
+                svg{
+                    path{
+                        fill:#50B7E0;
+                    }
+                }
+            }
+        }
+        &__all{
+            position: relative;
+            &::before{
+                content: '';
+                background-image: url("../img/lines/Group40.png");
+                position: absolute;
+                width: 120px;
+                height: 50px;
+                background-repeat: no-repeat;
+                background-size: 100%;
+                left: 0px;
+                bottom: 87px;
+            }
+        }
+        
+    }
+    
+    .products--agriculture{
+        padding-bottom: 120px;
+        &__left {
+            &__line{
+                border-color: #8CB044;
+            }
+            &__link{
+                color: #8CB044;
+            }
+        }
+        .slick--slider--arrow{
+            background-color: #8CB044;
+            border: 1px solid #8CB044;
+            &:hover{
+                background-color: transparent;
+                svg{
+                    path{
+                        fill: #8CB044;
+                    }
+                }
+            }
+        }
+        &__all{
+            position: relative;
+            &::before{                
+                content: '';
+                background-image: url("../img/lines/Line6.png");
+                position: absolute;
+                width: 85px;
+                height: 50px;
+                background-repeat: no-repeat;
+                background-size: 100%;
+                left: 636px;
+                bottom: 45px;
+            }
+        }
+    }
+    .products--pipes{
+        &__all{
+            position: relative;
+            &::before{                
+                content: '';
+                background-image: url("../img/lines/Group40.png");
+                position: absolute;
+                width: 120px;
+                height: 50px;
+                background-repeat: no-repeat;
+                background-size: 100%;
+                right: 80px;
+                bottom: 45px;
+            }
+        }
+        padding-top: 100px;
+        &__left {
+            &__line{
+                border-color: #008E45;
+            }
+            &__link{
+                color: #008E45;
+                margin-bottom: 30px;
+            }
+        }
+        &__right{
+            &__content{
+                width: fit-content;
+                position: relative;
+                &__info{
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        background: rgba(0, 90, 128, 0.65);
+                        height: 100%;
+                        width: 100%;
+                    }
+                    &::after{
+                        content: '';
+                        height: 61px;
+                        border-left: 14px solid #8CB044;
+                        position: absolute;
+                        top: 30px;
+                        left: 0;
+                    }
+                    &__link{
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        a{
+                            width: fit-content;
+                            height: fit-content;
+                            font-family: GothamBold;
+                            border: 4px solid #ffffff;
+                            color: #ffffff;
+                            display: block;
+                            padding: 15px 68px;
+                            font-size: 22px;
+                            &:hover{
+                                border-color: #008E45;
+                                background:#008E45;
+                                -moz-transition: opacity 1s;
+                                -ms-transition: opacity 1s;
+                                -o-transition: opacity 1s;
+                                transition: opacity 1s;
+                                -webkit-transition: opacity 1s;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// .product--slider{
+    
+//     .slick-slide{
+//         padding-left: 40px;
+//         min-width: 303px;
+//         min-height: 303px;
+//     }
+// }
+.product--slider{
+.slick-slide{
+    padding-left:  15px;
+    padding-right:  15px;
+  }
+
+  .slick-list {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+
+@media only screen and (min-width: 1800px){
+    .container--products{
+        padding-left: 105px;
+        max-width: 1750px;
+    }
+    .products--industries{
+        &__left {
+            &__title{
+                line-height: 66px;
+            }
+        } 
+    }
+    .products{
+        .slick--slider--arrow{
+            padding: 24px 22px;
+            min-height: 71px;
+            min-width: 71px;
+            svg{
+                font-size: 20px;
+            }
+            &.slick-prev{
+                right: 90px;
+            }
+        }
+        
+    }
+    .products--pipes{
+        &__left {
+            &__title {
+                line-height: 72px;
+            }
+        }
+    }
+    .products--agriculture{
+        &__left {
+            &__link{
+                margin-top: 165px!important;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 991px){
+    .products{
+        .products--pipes{
+            &__right{
+                &__content{
+                    &__info{
+                        &__link{
+                            a{
+                                font-family: GothamBold;
+                                border: 2px solid #ffffff;
+                                color: #ffffff;
+                                display: block;
+                                padding: 15px 30px;
+                                font-size: 13px;
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+        .products--agriculture{
+            &__all{
+                position: relative;
+                &::before{                
+                    left: 0px;
+                    bottom: 45px;
+                }
+            }
+        }
+        
+    }  
+}
+@media only screen and (max-width: 767px){
+    .products{
+        .product--content{
+            padding-top: 30px;
+            padding-bottom: 60px;
+        }
+
+
+        
+        .products--industries{
+            &__left{
+                &__text{
+                    margin-bottom: 0;
+                }
+                &__link{
+                    margin-top: 27px;
+                }
+            }            
+        }
+
+        
+
+
+
+        .products--pipes{
+            &__right{
+                &__content{
+                    margin-top: 50px;
+                }
+            }
+            &__all{
+                &::before{                
+                    content: '';
+                    background-image: url("../img/lines/Group40.png");
+                    position: absolute;
+                    width: 120px;
+                    height: 50px;
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    right: 100%;
+                    left: 0px;
+                    bottom: 25px;
+                }
+            }
+            
+        }
+        .products--packaging{
+            &__all{
+                &::before{
+                    bottom: 0px;
+                }
+            }
+        }
+        
+    } 
+}
