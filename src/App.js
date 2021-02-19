@@ -14,7 +14,9 @@ import About from './components/pages/About';
 import Products from './components/pages/Products';
 import Media from './components/pages/Media';
 import Contact from './components/pages/Contact';
-
+import Industrial from './components/pages/Industrial';
+import Agriculture from './components/pages/Agriculture';
+import Packaging from './components/pages/Packaging';
 
 
 
@@ -39,6 +41,15 @@ function App() {
             </Route>
             <Route path="/contact">
               <Contact/>
+            </Route>            
+            <Route path="/industrial">
+              <Industrial/>
+            </Route>            
+            <Route path="/agriculture">
+              <Agriculture/>
+            </Route>
+            <Route path="/packaging">
+              <Packaging/>
             </Route>
             <Route path="/" exact>
               <Home />

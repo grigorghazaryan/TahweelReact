@@ -5,6 +5,8 @@ import Image01 from '../../img/Media/image.jpg';
 import Slider from "react-slick";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 function SampleNextArrow(props) {
     const { onClick } = props;

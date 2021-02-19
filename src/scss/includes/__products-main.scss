@@ -1,0 +1,125 @@
+.products{
+    &--page{
+        background-color: $bg-blue;
+        background-image: url("../img/Product/Texture.svg");
+        background-size: 100%;
+        padding-top: 120px;
+        padding-bottom: 104px;
+        &__categories{
+            &__col{
+                margin-bottom: 60px;
+            }
+            
+            &__content{
+                // border: 3px solid rgba(255, 255, 255, 0.75);
+                // background-color: rgba(255, 255, 255, 0.75);
+                // padding: 30px 30px;
+                // display: flex;
+                // align-items: center;
+                height: 100%;
+                .full--height{
+                    height: 100%;
+                }
+                a{
+                    border: 3px solid rgba(255, 255, 255, 0.75);
+                    background-color: rgba(255, 255, 255, 0.75);
+                    display: block;
+                    padding: 30px 30px;
+                    // display: flex;
+                    // align-items: center;
+                    height: 100%;
+                    &:hover{
+                        text-decoration: none;
+                    }
+                }
+                &__title{
+                    color: #333333;
+                    max-width: 90%;
+                }
+                &--industries{
+                    &__line{
+                        border-color: #005F83;
+                    }
+                    &:hover{
+                        border-color: rgba(0, 90, 128, 0.75);
+                    }
+                }
+                &--packaging{
+                    
+                    &__line{
+                        border-color: #71C8EF;
+                    }
+                    &:hover{
+                        border-color: rgba(80, 183, 224, 0.75);
+                    }
+                }
+                &--agriculture{
+                    &__line{
+                        border-color: #8BAF44;
+                    }
+                    &:hover{
+                        border-color: rgba(140, 176, 68, 0.75);
+                    }
+                    .page--title{
+                        margin-top: 66px;
+                    }
+                }
+                &--pipes{
+                    &__line{
+                        border-color: #008D45;
+                    }
+                    &:hover{
+                        border-color: rgba(0, 142, 69, 0.75);
+                    }
+                }
+                &__text{
+                    color: #333333!important;
+                }
+
+            }
+        }
+
+    }
+
+}
+
+
+
+@media only screen and (min-width: 1800px){
+
+    .products{
+        &--page{
+            &__categories{
+                &__content{
+                    a{
+                        padding: 50px 50px;
+                    min-height: 524px;
+                    }
+                    &__title{
+                        line-height: 66px;
+                    }
+                    &__text{
+                        margin-top: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 992px){
+    .products{
+        &--page{
+            &__categories{
+                &__col{
+                    &:nth-child(odd){
+                        padding-right: 30px;
+                    }
+                    &:nth-child(even){
+                        padding-left: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
