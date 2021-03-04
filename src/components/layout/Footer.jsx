@@ -87,7 +87,8 @@ function Footer (props) {
                                 </ul>
                             </div>
                             <div className="col-xs-12 col-md-6">
-                                <p className="footer__copyright__text">© 2020 Tahweel Integrated. All Rights Reserved.</p>
+                                <p className="footer__copyright__text">{`© 2020 Tahweel Integrated. 
+                                All Rights Reserved.`}</p>
                             </div>
                         </div>
                     </div>

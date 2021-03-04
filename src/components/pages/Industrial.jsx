@@ -81,7 +81,7 @@ function Industrial(props){
             
             <div className="products--category__main">
                 <div data-aos="fade-right" data-aos-duration="1000">
-                    <div className="container container--products  overflow--hidden">
+                    <div className="container container--products single--products--slider overflow--hidden">
                         <div className="row">
                             <div className="col-md-10 col-12">                        
                                 <h1 className=" page--title products--category__main__title">{`Industrial

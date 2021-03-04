@@ -211,8 +211,13 @@
                 border-top-right-radius: 100px;
             }
             &__text{
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 position: absolute;
                 top: 0;
+                padding-top: 15px;
+                padding-bottom: 15px;
                 padding-left: 30px;
                 padding-right: 30px;
                 bottom: 0;
@@ -281,7 +286,7 @@
             }
             &__cart{
                 &__text{
-                    padding-top: 25px;
+                    // padding-top: 25px;
                     padding-left: 32px;
                     padding-right: 32px;
                 }
@@ -355,13 +360,13 @@
         .container--medium{
             max-width: 1380px;
         }
-        &__info{
-            &__cart{
-                &__text{
-                    padding-top: 50px;
-                }
-            }
-        }
+        // &__info{
+        //     &__cart{
+        //         &__text{
+        //             padding-top: 50px;
+        //         }
+        //     }
+        // }
     }
     .about--people{
         &__content{
@@ -398,16 +403,16 @@
             }
         }
     }
-    .about--environment{
-        &__info{
-            &__cart{
-                &__text{
-                    padding-top: 25px;
-                }
+    // .about--environment{
+    //     &__info{
+    //         &__cart{
+    //             &__text{
+    //                 padding-top: 25px;
+    //             }
                 
-            }
-        }
-    }
+    //         }
+    //     }
+    // }
 }
 @media only screen and (max-width: 767px) {
     // .page--title{

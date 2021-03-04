@@ -545,6 +545,7 @@ body {
   }
   .footer__copyright__text {
     text-align: center;
+    white-space: pre-line;
   }
   .footer__logo__col::after {
     border-right: none;
@@ -1463,8 +1464,13 @@ body {
 }
 
 .about--environment__info__cart__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
   padding-left: 30px;
   padding-right: 30px;
   bottom: 0;
@@ -1522,7 +1528,6 @@ body {
     padding-right: 15px;
   }
   .about--environment__info__cart__text {
-    padding-top: 25px;
     padding-left: 32px;
     padding-right: 32px;
   }
@@ -1559,9 +1564,6 @@ body {
   .about--environment .container--medium {
     max-width: 1380px;
   }
-  .about--environment__info__cart__text {
-    padding-top: 50px;
-  }
   .about--people__content__img {
     padding-right: 15px;
   }
@@ -1577,9 +1579,6 @@ body {
   }
   .about--overview__content__text__text::before {
     left: -26px;
-  }
-  .about--environment__info__cart__text {
-    padding-top: 25px;
   }
 }
 
@@ -1706,7 +1705,7 @@ body {
   border-color: #005F83;
 }
 
-.products--page__categories__content--industries:hover {
+.products--page__categories__content--industries:hover a {
   border-color: rgba(0, 90, 128, 0.75);
 }
 
@@ -1714,7 +1713,7 @@ body {
   border-color: #71C8EF;
 }
 
-.products--page__categories__content--packaging:hover {
+.products--page__categories__content--packaging:hover a {
   border-color: rgba(80, 183, 224, 0.75);
 }
 
@@ -1722,7 +1721,7 @@ body {
   border-color: #8BAF44;
 }
 
-.products--page__categories__content--agriculture:hover {
+.products--page__categories__content--agriculture:hover a {
   border-color: rgba(140, 176, 68, 0.75);
 }
 
@@ -1734,7 +1733,7 @@ body {
   border-color: #008D45;
 }
 
-.products--page__categories__content--pipes:hover {
+.products--page__categories__content--pipes:hover a {
   border-color: rgba(0, 142, 69, 0.75);
 }
 
@@ -1994,6 +1993,7 @@ body {
   border-radius: 0;
   margin-right: 35px;
   padding: 14px 37px;
+  margin-bottom: 10px;
 }
 
 .products--category__info__tab .nav-tabs a.active {
@@ -2258,6 +2258,27 @@ body {
   }
   .products--category__main__item > div {
     width: 100%;
+  }
+  .products--category .slick--slider--arrow.slick-next {
+    top: 105%;
+    right: 37%;
+  }
+  .products--category .slick--slider--arrow.slick-prev {
+    top: 105%;
+    left: auto;
+    right: 54%;
+  }
+  .single--products--slider {
+    padding-bottom: 60px;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .products--category .slick--slider--arrow.slick-next {
+    right: 27%;
+  }
+  .products--category .slick--slider--arrow.slick-prev {
+    right: 59%;
   }
 }
 

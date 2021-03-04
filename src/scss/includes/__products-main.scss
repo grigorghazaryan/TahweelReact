@@ -41,7 +41,9 @@
                         border-color: #005F83;
                     }
                     &:hover{
-                        border-color: rgba(0, 90, 128, 0.75);
+                        a{                            
+                            border-color: rgba(0, 90, 128, 0.75);
+                        }
                     }
                 }
                 &--packaging{
@@ -50,7 +52,9 @@
                         border-color: #71C8EF;
                     }
                     &:hover{
-                        border-color: rgba(80, 183, 224, 0.75);
+                        a{                            
+                            border-color: rgba(80, 183, 224, 0.75);
+                        }
                     }
                 }
                 &--agriculture{
@@ -58,7 +62,9 @@
                         border-color: #8BAF44;
                     }
                     &:hover{
-                        border-color: rgba(140, 176, 68, 0.75);
+                        a{
+                            border-color: rgba(140, 176, 68, 0.75);
+                        }
                     }
                     .page--title{
                         margin-top: 66px;
@@ -69,7 +75,9 @@
                         border-color: #008D45;
                     }
                     &:hover{
-                        border-color: rgba(0, 142, 69, 0.75);
+                        a{
+                            border-color: rgba(0, 142, 69, 0.75);
+                        }
                     }
                 }
                 &__text{

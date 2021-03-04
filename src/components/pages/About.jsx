@@ -75,13 +75,13 @@ function About(props){
                         <div className="col-md-6 col-xs-12 col-lg-4  ">
                             <div data-aos="fade-left" data-aos-duration="1000">
                                 <div className="">
-                                    <p className="about--integrated__content__right text--content">Tahweel corporate mandate and objectives are to provide world markets with integrated products to meet the growing needs of the ever growing global markets. 
+                                    <p className="about--integrated__content__right text--content">{`Tahweel corporate mandate and objectives are to provide world markets with integrated products to meet the growing needs of the ever growing global markets. 
                                         
                                         Tahweel delivers a complete range of diversified, value added, performance enhanced products for the demanding markets. 
                                         
                                         Tahweel has a set of corporate and manufacturing standards for combining excellent products pricing with outstanding quality. 
                                         
-                                        Tahweel is commitment to business integrity, product quality, client services and environmental responsibility. The company's relationship with business stakeholders are built to last.</p>
+                                        Tahweel is commitment to business integrity, product quality, client services and environmental responsibility. The company's relationship with business stakeholders are built to last.`}</p>
                                 </div>
                             </div>
                         </div>
@@ -97,8 +97,8 @@ function About(props){
                     <div className="row about--mission__content">
                         <div className="col-md-6 col-xs-12  col-lg-3 offset-lg-1 about--mission__content__text">
                             <div data-aos="fade-right" data-aos-duration="1000">
-                                <h2 className=" about--mission__content__text__title page--title">Mission 
-                                    <span>& Vision</span></h2>
+                                <h2 className=" about--mission__content__text__title page--title">{`Mission 
+                                    `}<span>& Vision</span></h2>
                                 <hr className="about--mission__content__text__line  page--title__line" />
                             </div>
                         </div>
@@ -122,25 +122,57 @@ function About(props){
                 </div>
             </div>
 
+            <div className="about--history overflow--hidden">
+                <div className="container container--medium">
+                    <div className="row about--history__content">
+                        <div className="col-md-6 col-xs-12  col-lg-3 offset-lg-1 about--history__content__text">
+                            <div data-aos="fade-right" data-aos-duration="1000">
+                                <h2 className=" about--history__content__text__title page--title"><span>History</span></h2>
+                                <hr className="about--history__content__text__line  page--title__line" />
+                            </div>
+                        </div>
+                        <div className="col-md-6 col-xs-12 col-lg-8">
+                            <div data-aos="fade-left" data-aos-duration="1000">
+                                <div className="about--history__content__right">
+                                    <p className="about--history__content__right__text text--content">{`Tahweel was established in 2012 headquarted in Jaddeh - Kingdom Of Saudi Arabia. 
+                
+                                        Tahweel business operation were headed by a series of competent administrators, industrial engineers, technicians and experts. 
+                                        
+                                        With 40 years of collitive expertise, tahweel's unique knowledge and know-how necessary to meet customer's expectations moved step beyond competitors in the field, yet setting the benchmark in today's exciting world of manufacturing solutions. 
+                                        
+                                        Tahweel has expanded its operations into Asia, North Africa and Europe with a strategic vision to be a true business conglomorate. 
+                                        
+                                        Focusing on its strategic vision and soliciting the support of its affiliates, colleagues, employees, buyers, and all those associated with its businesses, Tahweel is now right on the track to continue its sustainable growth. 
+                                        
+                                        The relationships with clients gave Tahweel its flourishing entity of today.`}</p>
+                        
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
             <div className="about--around--the--world overflow--hidden">
         
                 <div className="container container--max">
                     <div className="row about--around--the--world__content">
                         <div className="col-md-12 col-xs-12  col-lg-12 about--around--the--world__content__text">
                             <div data-aos="fade-right" data-aos-duration="1000">
-                                <h2 className=" about--around--the--world__content__text__title page--title">Tahweel 
-                                    <span>Around The World</span></h2>
+                                <h2 className=" about--around--the--world__content__text__title page--title">{`Tahweel 
+                                    `}<span>Around The World</span></h2>
                                 <hr className="about--around--the--world__content__text__line  page--title__line" />
                             </div>
                         </div>
                         <div className="col-md-12 col-xs-12 col-lg-6  offset-lg-2">
                             <div data-aos="fade-left" data-aos-duration="1000">
                                 <div className="about--around--the--world__content__right">
-                                    <p className="about--around--the--world__content__right__text text--content">Tahweel is a global supplier for flexible packaging solutions, known for its outstanding quality Continuously improving its service and quality standards. 
+                                    <p className="about--around--the--world__content__right__text text--content">{`Tahweel is a global supplier for flexible packaging solutions, known for its outstanding quality Continuously improving its service and quality standards. 
                                         
                                         Tahweel has been a genuine market leader for setting high quality standards in the flexible packaging industry by partnering with leading global brands. 
                                         
-                                        Tahweel owns outstanding production facilities in the world with style of construction, infrastructure and high technology of production and scale.
+                                        Tahweel owns outstanding production facilities in the world with style of construction, infrastructure and high technology of production and scale.`}
                                         </p>
                                 </div>
                             </div>

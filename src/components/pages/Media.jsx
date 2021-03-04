@@ -55,8 +55,8 @@ function Media(props){
             <div className="container container--medium">
                 <div className="col-md-12 col-sm-12">
                     <div data-aos="fade-right" data-aos-duration="1000">
-                        <h1 className=" page--title media__title">Tahweel 
-                            <span>News & Media Center</span></h1>
+                        <h1 className=" page--title media__title">{`Tahweel
+                        `}<span>News & Media Center</span></h1>
                         <hr className="media__title__line page--title__line" />
                     </div>
                 </div>
@@ -74,8 +74,8 @@ function Media(props){
                                         <div className="media--slider__slide__info__text slider--text">
                                             <div>
                                                 <h2>XYZ</h2>
-                                                <p>Cost, Quality, Performance, Reliability, 
-                                                    Serviceability And User Features Are..</p>
+                                                <p>{`Cost, Quality, Performance, Reliability, 
+                                                    Serviceability And User Features Are..`}</p>
                                             </div>
                                             <div className="layer"></div>
                                             
@@ -99,8 +99,8 @@ function Media(props){
                                         <div className="media--slider__slide__info__text slider--text">
                                             <div>
                                                 <h2>XYZ</h2>
-                                                <p>Cost, Quality, Performance, Reliability, 
-                                                    Serviceability And User Features Are..</p>
+                                                <p>{`Cost, Quality, Performance, Reliability, 
+                                                    Serviceability And User Features Are..`}</p>
                                             </div>
                                             <div className="layer"></div>
                                         </div>
@@ -123,8 +123,8 @@ function Media(props){
                                         <div className="media--slider__slide__info__text slider--text">
                                             <div>
                                                 <h2>XYZ</h2>
-                                                <p>Cost, Quality, Performance, Reliability, 
-                                                    Serviceability And User Features Are..</p>
+                                                <p>{`Cost, Quality, Performance, Reliability, 
+                                                    Serviceability And User Features Are..`}</p>
                                             </div>
                                             <div className="layer"></div>
                                         </div>
@@ -147,8 +147,8 @@ function Media(props){
                                         <div className="media--slider__slide__info__text slider--text">
                                             <div>
                                                 <h2>XYZ</h2>
-                                                <p>Cost, Quality, Performance, Reliability, 
-                                                    Serviceability And User Features Are..</p>
+                                                <p>{`Cost, Quality, Performance, Reliability, 
+                                                    Serviceability And User Features Are..`}</p>
                                             </div>
                                             <div className="layer"></div>
                                         </div>

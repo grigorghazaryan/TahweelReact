@@ -49,24 +49,24 @@ function Contact(props) {
                             <div data-aos="fade-right" data-aos-duration="1000">
 
                                 <div className="contact__directory__top__content">
-                                    <h1 className=" page--title contact__directory__top__content__title">Contact 
-                                        <span>Directory</span></h1>
+                                    <h1 className=" page--title contact__directory__top__content__title">{`Contact
+                                       `} <span>Directory</span></h1>
                                     <hr className="page--title__line contact__directory__top__content__line" />
                                     <p className="contact__directory__top__content__text">Tahweel would be pleased to answer your questions, enquiries and takes your suggestions seriously and thanks you for your time and concern.</p>
                                 </div>
                                 <div className="row contact__directory__bottom">
                                     <div className="col-xs-12 col-md-6 col-lg-6">
-                                        <a href="https://goo.gl/maps/pZMPvGqiJWNSm2Di9" target="_blank" className="contact__directory__bottom__link" rel="noreferrer">Jeddah 6587-23322 
-                                            Kingdom Of Saudi Arabia</a>
-                                        <p className="contact__directory__bottom__phone">+966126576336 
+                                        <a href="https://goo.gl/maps/pZMPvGqiJWNSm2Di9" target="_blank" className="contact__directory__bottom__link" rel="noreferrer">{`Jeddah 6587-23322 
+                                            Kingdom Of Saudi Arabia`}</a>
+                                        <p className="contact__directory__bottom__phone">{`+966126576336 
                                             +966126576336 - EXT 102 
-                                            <span>P.O Box:2941</span></p>
+                                            `}<span>P.O Box:2941</span></p>
                                     </div>
                                     <div className="col-xs-12 col-md-6 col-lg-6">
-                                        <a href="https://goo.gl/maps/1cfK8kikCTq1baraA" target="_blank" className="contact__directory__bottom__link" rel="noreferrer" >Rabigh Factory 
-                                            Kingdom Of Saudi Arabia</a>
-                                        <p className="contact__directory__bottom__phone">+966122238000 
-                                            +966122238000- EXT 8090</p>
+                                        <a href="https://goo.gl/maps/1cfK8kikCTq1baraA" target="_blank" className="contact__directory__bottom__link" rel="noreferrer" >{`Rabigh Factory 
+                                            Kingdom Of Saudi Arabia`}</a>
+                                        <p className="contact__directory__bottom__phone">{`+966122238000 
+                                        +966122238000-EXT 8090`}</p>
                                     </div>
                                 </div>
                                     
