@@ -5,10 +5,10 @@ import { Image } from 'react-bootstrap';
 import logo from '../../img/Logo.png';
 
 function Header (props) {
+    let slider_path = 'http://tahweel.local/uploads/';
 
     function onClickShowMobileMenu() {
         let main_menu = document.getElementsByClassName('mobile--menu__left');
-    
         for (let i=0; i<main_menu.length; i++) {
             main_menu.item(i).classList.add('mobile--menu__left__show');
             if(document.getElementsByClassName('hide--menu')){
