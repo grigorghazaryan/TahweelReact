@@ -65,7 +65,7 @@ function Industrial(props){
             if( el.success ) {
                 switch (i) {
                     case 0:
-                        newState = data;
+                        newState = result.data;
                         break;
                     /*case 1:
                         newState.products = el.products;
