@@ -1,8 +1,8 @@
 const allConstants = {};
 
 allConstants.urls = {
-    UPLOAD: "http://tahweel.local/uploads/",
-    API: 'http://tahweel.local/api'
+    UPLOAD: "https://tahweel-front.aimtech.am/uploads/",
+    API: 'https://tahweel-front.aimtech.am/api'
 }
 
 export default allConstants;
