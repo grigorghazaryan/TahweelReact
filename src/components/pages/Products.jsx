@@ -50,7 +50,7 @@ class Products extends Component {
             <div key={i} className="col-lg-6 col-12 products--page__categories__col">
                 <div className="products--page__categories__content products--page__categories__content--industries">
                     <div data-aos="fade-right" data-aos-duration="1000" className="full--height">
-                        <NavLink to="/industrial" exact>
+                        <NavLink to={`/industrial/${item.id}`} exact>
                             <h1 className=" page--title products--page__categories__content__title">
                                 <span>{item.name}</span>
                             </h1>

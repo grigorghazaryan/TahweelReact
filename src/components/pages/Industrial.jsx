@@ -1,4 +1,4 @@
-import { React, useState, setStatus } from 'react';
+import {React, useState, setStatus, useEffect} from 'react';
 import { Image, Tab, Tabs, Collapse } from 'react-bootstrap';
 import Handroll from '../../img/Product-category/IndustrialSolutions/222Handroll.jpg';
 import img1 from '../../img/Product-category/IndustrialSolutions/111.jpg';
@@ -13,6 +13,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import constants from "../../helpers/constants";
 
 function SampleNextArrow(props) {
     const { onClick } = props;
@@ -29,12 +30,60 @@ function SampleNextArrow(props) {
   }
 
 function Industrial(props){
+    const id = props.match.params.id;
+    const url = `${constants.urls.API}/getProductsByCategory/${id}`;
+
     const [open1, setOpen1] = useState(false);
     const [open2, setOpen2] = useState(false);
-
     // find out if tab is open or closed
     const [status1, setStatus1] = useState('open--tab');
-    const onEntered1 = () => setStatus1('close--tab');  
+    const [ data, setData ] = useState(null);
+
+    useEffect(()=>{
+        /*fetch( url )
+            .then( response => response.json() )
+            .then( result =>{
+                if( result.success ) {
+                    setData(result.category);
+                }
+            })
+            .catch(console.log);*/
+    Promise.all([
+        fetch(url, {
+            method: `GET`
+        }),
+
+    ]).then( res =>{
+        return Promise.all(
+            res.map( response => {
+                return response.json()
+            })
+        )
+    }) .then( result =>{
+        let newState = {}
+        result.forEach( ( el,i ) => {
+            if( el.success ) {
+                switch (i) {
+                    case 0:
+                        newState = data;
+                        break;
+                    /*case 1:
+                        newState.products = el.products;
+                        break;
+*/
+                }
+            }
+        })
+        setData( newState );
+    })
+        .catch( err => {
+            console.log(err);
+
+            /* scroll animation end */
+        })
+    },[]);
+
+    const onEntered1 = () => setStatus1('close--tab');
     const onExited1 = () => setStatus1('open--tab');
 
     const [status2, setStatus2] = useState('open--tab');
@@ -76,6 +125,7 @@ function Industrial(props){
         ]
     };
 
+    console.log(data);
     return (
         <div className="products--category overflow--hidden">
             
@@ -86,7 +136,8 @@ function Industrial(props){
                             <div className="col-md-10 col-12">                        
                                 <h1 className=" page--title products--category__main__title">{`Industrial
                                 `} 
-                                                <span>Solutions</span></h1>
+                                                <span>Solutions{data?.category.id}</span></h1>
+                                {data?.category.id}
                                 <hr className="products--category__main__line page--title__line" />
                                 <p className="text--content products--category__main__text">
                                     All Range of industrial Solutions Film is offered as standard format and customized. Wide range of mechanical properties of the film and colours are available, for the best performance on different applications, where the film features will be fit on custom packaging lines, and thus achieve greater efficiency on saving the time and costs, which is our main objective.

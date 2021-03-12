@@ -42,8 +42,7 @@ function App() {
             <Route path="/contact">
               <Contact/>
             </Route>            
-            <Route path="/industrial">
-              <Industrial/>
+            <Route path="/industrial/:id" component={Industrial} >
             </Route>            
             <Route path="/agriculture">
               <Agriculture/>
