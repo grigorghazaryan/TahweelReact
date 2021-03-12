@@ -31,7 +31,8 @@ class Media extends Component {
         this.state = {
             url: [],
             media: [],
-            open: false
+            open: false,
+            openedItem: null
         }
 
 
@@ -86,7 +87,10 @@ class Media extends Component {
         const media = this.state.media.map(( item, i ) => (
             <div key={1}>
                 {/* <div  data-toggle="collapse" data-target="#mediaInfo" aria-expanded="false" aria-controls="mediaInfo" className="media--slider__slide"> */}
-                <div onClick={() => this.setState({open: !this.state.open})}
+                <div onClick={() => this.setState({
+                                                            open: !this.state.open,
+                                                            openedItem: this.state.openedItem === null ? item : null
+                                                        })}
                      aria-controls="example-collapse-text"
                      aria-expanded={this.state.open}>
                     <div className="media--slider__slide__info" >
@@ -138,19 +142,19 @@ class Media extends Component {
 
                                 <div className="row">
                                     <div className="col-md-9">
-                                        <h2 className="media--slider__bottom__info__title"> Interpack Exhibition In Düsseldorf, Germany</h2>
+                                        <h2 className="media--slider__bottom__info__title">
+                                            { this.state.openedItem ? this.state.openedItem.title : `` }
+                                        </h2>
                                     </div>
                                     <div className="col-md-3">
-                                        <p  className="media--slider__bottom__info__date">April 7, 2014</p>
+                                        <p  className="media--slider__bottom__info__date">
+                                            { this.state.openedItem ? this.state.openedItem.date : `` }
+                                        </p>
                                     </div>
                                     <div className="col-md-9">
                                         <p className="media--slider__bottom__info__text">
-                                           { `With leading technological developments and presence in Asia, Europe, America and North Africa, Tahweel has set a new industry standard for production line innovation, becoming one of the most outstanding companies in their market, tear and puncture resistance. 
-                                            
-                                            Specialized in the production of high versatile Pallet-Wrap Stretch Film with a unique combination of strength, tear and puncture resistance, tear and puncture resistance. 
-                                            
-                                            In order to provide the best customer service and support, Tahweel has made a strong bid expanding its warehouses in strategic locations to ensure an excellent distribution service among with future investments in new film processes and applications.`}
-                                            </p>
+                                               { this.state.openedItem ? this.state.openedItem.description : `` }
+                                        </p>
                                     </div>
                                 </div>
 

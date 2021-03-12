@@ -1,42 +1,132 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { Image } from 'react-bootstrap';
 import Group27 from '../../img/contact/Group27.jpg';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import constants from "../../helpers/constants";
 
-function Contact(props) {
-    AOS.init({
-        once : true
-    });
-    document.addEventListener('scroll', function(e) {
+class Contact extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            url: [],
+            state: [],
+            career: [],
+            contact: [],
+
+        }
         AOS.init({
-            once : true,
+            once: true
         });
-    });
+        document.addEventListener('scroll', function (e) {
+            AOS.init({
+                once: true,
+            });
+        });
+        this.career_url = `${constants.urls.API}/getCareer`;
+        this.contact_url = `${constants.urls.API}/getContactUs`;
+    }
+    componentDidMount() {
+        Promise.all([
+            fetch(this.career_url, {
+                method: `GET`
+            }),
+            fetch(this.contact_url, {
+                method: `GET`
+            }),
+
+
+        ]).then( res =>{
+            return Promise.all(
+                res.map( response => {
+                    return response.json()
+                })
+            )
+        }) .then( result =>{
+            const newState = {}
+            result.forEach( ( el,i ) => {
+                if( el.success ) {
+                    switch (i) {
+                        case 0:
+                            newState.career = el.career;
+                            break;
+                        case 1:
+                            newState.contact = el.contact_us;
+                            break;
+
+                    }
+                }
+            })
+            this.setState( newState );
+        })
+            .catch( err => {
+                console.log(err);
+
+                /* scroll animation end */
+            })
+    }
+    render() {
+
+        const career = this.state.career.map(( item, i ) => (
+            <div className="row">
+                <div className="col-xs-12 col-md-6 col-lg-6 contact__info__left">
+                    <div data-aos="fade-right" data-aos-duration="1000">
+                        <div className="contact__info__left__content">
+                            <h1 className=" page--title contact__info__left__content__title"><span>{item.title}</span></h1>
+                            <hr className="page--title__line contact__info__left__content__line" />
+                            <p className="contact__info__left__content__text">{item.description}</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-xs-12 col-md-6 col-lg-6 contact__info__right">
+                    <div data-aos="fade-left" data-aos-duration="1000">
+                        <div className="contact__info__right__content">
+                            <Image src={item.image} className="contact__info__right__content__img"/>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        ))
+        const contact = this.state.contact.map(( item, i ) => (
+            <div data-aos="fade-right" data-aos-duration="1000">
+
+                <div className="contact__directory__top__content">
+                    <h1 className=" page--title contact__directory__top__content__title">{`Contact
+                                       `} <span>Directory</span></h1>
+                    <hr className="page--title__line contact__directory__top__content__line" />
+                    <p className="contact__directory__top__content__text">Tahweel would be pleased to answer your questions, enquiries and takes your suggestions seriously and thanks you for your time and concern.</p>
+                </div>
+                <div className="row contact__directory__bottom">
+                    <div className="col-xs-12 col-md-6 col-lg-6">
+                        <a href="https://goo.gl/maps/pZMPvGqiJWNSm2Di9" target="_blank" className="contact__directory__bottom__link" rel="noreferrer">
+                            {item.country}
+                        </a>
+                        <p className="contact__directory__bottom__phone">
+                            {item.telephone_number}
+                        </p>
+                        <p className="contact__directory__bottom__phone">
+                            <span>{"P.O Box:" + item.po_box}</span>
+                        </p>
+                    </div>
+                    <div className="col-xs-12 col-md-6 col-lg-6">
+                        <a href="https://goo.gl/maps/1cfK8kikCTq1baraA" target="_blank" className="contact__directory__bottom__link" rel="noreferrer" >
+                            {item.factory_name}
+                        </a>
+                        <p className="contact__directory__bottom__phone">
+                            {item.fax_number}</p>
+                    </div>
+                </div>
+
+            </div>
+
+        ))
     return(
         <div className="contact overflow--hidden">
             <div className="contact__info">
                 <div className="container container--medium">
-                
-                    <div className="row">
-                        <div className="col-xs-12 col-md-6 col-lg-6 contact__info__left">
-                            <div data-aos="fade-right" data-aos-duration="1000">
-                                <div className="contact__info__left__content">
-                                    <h1 className=" page--title contact__info__left__content__title"><span>Careers</span></h1>
-                                    <hr className="page--title__line contact__info__left__content__line" />
-                                    <p className="contact__info__left__content__text">Tahweel offers qualified, ambitious and ethical people the opportunity to work in a very empowering environment. We are looking for people who can share our values, motivated enough to grow professionally and naturally gifted to cooperate and help us achieve our common objectives.</p>
-                                </div>
-                            </div>                        
-                        </div>
-                        <div className="col-xs-12 col-md-6 col-lg-6 contact__info__right">
-                            <div data-aos="fade-left" data-aos-duration="1000">                        
-                                <div className="contact__info__right__content">
-                                    <Image src={Group27} className="contact__info__right__content__img"/>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
+                    {career}
                 </div>
                 
             </div>
@@ -46,31 +136,7 @@ function Contact(props) {
                 
                     <div className="row">
                         <div className="col-xs-12 col-md-8 col-lg-8 contact__directory__top">
-                            <div data-aos="fade-right" data-aos-duration="1000">
-
-                                <div className="contact__directory__top__content">
-                                    <h1 className=" page--title contact__directory__top__content__title">{`Contact
-                                       `} <span>Directory</span></h1>
-                                    <hr className="page--title__line contact__directory__top__content__line" />
-                                    <p className="contact__directory__top__content__text">Tahweel would be pleased to answer your questions, enquiries and takes your suggestions seriously and thanks you for your time and concern.</p>
-                                </div>
-                                <div className="row contact__directory__bottom">
-                                    <div className="col-xs-12 col-md-6 col-lg-6">
-                                        <a href="https://goo.gl/maps/pZMPvGqiJWNSm2Di9" target="_blank" className="contact__directory__bottom__link" rel="noreferrer">{`Jeddah 6587-23322 
-                                            Kingdom Of Saudi Arabia`}</a>
-                                        <p className="contact__directory__bottom__phone">{`+966126576336 
-                                            +966126576336 - EXT 102 
-                                            `}<span>P.O Box:2941</span></p>
-                                    </div>
-                                    <div className="col-xs-12 col-md-6 col-lg-6">
-                                        <a href="https://goo.gl/maps/1cfK8kikCTq1baraA" target="_blank" className="contact__directory__bottom__link" rel="noreferrer" >{`Rabigh Factory 
-                                            Kingdom Of Saudi Arabia`}</a>
-                                        <p className="contact__directory__bottom__phone">{`+966122238000 
-                                        +966122238000-EXT 8090`}</p>
-                                    </div>
-                                </div>
-                                    
-                            </div>
+                            {contact}
                         </div>
 
                     </div>
@@ -161,6 +227,6 @@ function Contact(props) {
 
         </div>
     )
-}
+} }
 
 export default Contact ;

@@ -5,7 +5,7 @@ import { Image } from 'react-bootstrap';
 import logo from '../../img/Logo.png';
 
 function Header (props) {
-    let slider_path = 'http://tahweel.local/uploads/';
+
 
     function onClickShowMobileMenu() {
         let main_menu = document.getElementsByClassName('mobile--menu__left');
