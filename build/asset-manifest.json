@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.51dfdae6.chunk.css",
-    "main.js": "/static/js/main.3b6d5ce5.chunk.js",
-    "main.js.map": "/static/js/main.3b6d5ce5.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.9bb5525f.js",
-    "runtime-main.js.map": "/static/js/runtime-main.9bb5525f.js.map",
+    "main.css": "/static/css/main.3d4bb460.chunk.css",
+    "main.js": "/static/js/main.a37a3740.chunk.js",
+    "main.js.map": "/static/js/main.a37a3740.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.0f9e0b7a.js",
+    "runtime-main.js.map": "/static/js/runtime-main.0f9e0b7a.js.map",
     "static/css/2.5f0030a9.chunk.css": "/static/css/2.5f0030a9.chunk.css",
-    "static/js/2.52d7104c.chunk.js": "/static/js/2.52d7104c.chunk.js",
-    "static/js/2.52d7104c.chunk.js.map": "/static/js/2.52d7104c.chunk.js.map",
-    "static/js/3.20fe4ffd.chunk.js": "/static/js/3.20fe4ffd.chunk.js",
-    "static/js/3.20fe4ffd.chunk.js.map": "/static/js/3.20fe4ffd.chunk.js.map",
+    "static/js/2.3108bf82.chunk.js": "/static/js/2.3108bf82.chunk.js",
+    "static/js/2.3108bf82.chunk.js.map": "/static/js/2.3108bf82.chunk.js.map",
+    "static/js/3.b787daee.chunk.js": "/static/js/3.b787daee.chunk.js",
+    "static/js/3.b787daee.chunk.js.map": "/static/js/3.b787daee.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.5f0030a9.chunk.css.map": "/static/css/2.5f0030a9.chunk.css.map",
-    "static/css/main.51dfdae6.chunk.css.map": "/static/css/main.51dfdae6.chunk.css.map",
-    "static/js/2.52d7104c.chunk.js.LICENSE.txt": "/static/js/2.52d7104c.chunk.js.LICENSE.txt",
+    "static/css/main.3d4bb460.chunk.css.map": "/static/css/main.3d4bb460.chunk.css.map",
+    "static/js/2.3108bf82.chunk.js.LICENSE.txt": "/static/js/2.3108bf82.chunk.js.LICENSE.txt",
     "static/media/111.0ab33295.jpg": "/static/media/111.0ab33295.jpg",
     "static/media/2.1-Lamination.bde501e2.jpg": "/static/media/2.1-Lamination.bde501e2.jpg",
     "static/media/2.2-CollationSh.475fa1c1.jpg": "/static/media/2.2-CollationSh.475fa1c1.jpg",
@@ -50,10 +50,10 @@
     "static/media/slick-theme.css": "/static/media/slick.c94f7671.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.9bb5525f.js",
+    "static/js/runtime-main.0f9e0b7a.js",
     "static/css/2.5f0030a9.chunk.css",
-    "static/js/2.52d7104c.chunk.js",
-    "static/css/main.51dfdae6.chunk.css",
-    "static/js/main.3b6d5ce5.chunk.js"
+    "static/js/2.3108bf82.chunk.js",
+    "static/css/main.3d4bb460.chunk.css",
+    "static/js/main.a37a3740.chunk.js"
   ]
 }

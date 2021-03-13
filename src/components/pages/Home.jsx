@@ -19,7 +19,8 @@ class Home extends Component {
             url: [],
             state: [],
             whyTahweel:[],
-            aboutTahweel:[]
+            aboutTahweel:[],
+            isLoaded: false
         }
     AOS.init({
         once : true
@@ -51,31 +52,31 @@ class Home extends Component {
                 })
             )
         }) .then( result =>{
-                const newState = {}
-                result.forEach( ( el,i ) => {
-                    if( el.success ) {
-                        console.log(i)
-                        switch (i) {
-                            case 0:
-                                newState.whyTahweel = el.whyTahweel;
-                                break;
-                            case 1:
-                                newState.sliders = el.sliders;
-                                break;
-                            case 2:
-                                newState.aboutTahweel = el.about;
-                                break;
-                        }
+            const newState = {}
+            result.forEach( ( el,i ) => {
+                if( el.success ) {
+                    console.log(i)
+                    switch (i) {
+                        case 0:
+                            newState.whyTahweel = el.whyTahweel;
+                            break;
+                        case 1:
+                            newState.sliders = el.sliders;
+                            break;
+                        case 2:
+                            newState.aboutTahweel = el.about;
+                            break;
                     }
-                })
-            console.log(newState)
-                this.setState( newState );
+                }
             })
-            .catch( err => {
-                console.log('aa',err);
+            newState.isLoaded = true;
+            this.setState( newState );
+        })
+        .catch( err => {
+            console.log('aa',err);
 
-                /* scroll animation end */
-            })
+            /* scroll animation end */
+        })
     }
     render() {
         //console.log(this.state.whyTahweel);
@@ -144,6 +145,10 @@ class Home extends Component {
                 </div>
             </div>
         ))
+        if (!this.state.isLoaded) {
+            return <div className="loader"></div>
+        }
+
         return (
             <div className="home">
                 <HomeCarousel sliders={this.state.sliders || []} />
