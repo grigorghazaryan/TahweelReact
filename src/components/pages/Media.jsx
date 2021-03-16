@@ -32,6 +32,7 @@ class Media extends Component {
             url: [],
             media: [],
             open: false,
+            isLoaded: false,
             openedItem: null
         }
 
@@ -66,14 +67,18 @@ class Media extends Component {
         this.url = `${constants.urls.API}/getMedia`;
     }
     componentDidMount() {
+
         fetch(this.url, {
             method: `GET`
         }).then( res =>{
             return res.json()
         })
             .then( result =>{
+
                 this.setState({
-                    media: result.media
+                    isLoaded: true,
+                    media: result.media,
+
                 })
             })
             .catch( err =>{
@@ -112,6 +117,13 @@ class Media extends Component {
             </div>
 
         ))
+        if (!this.state.isLoaded) {
+            return <div className="loader">
+                <div className="spinner-border" role="status">
+                    <span className="sr-only">Loading...</span>
+                </div>
+            </div>
+        }
     return(
         <div className="media overflow--hidden">
             <div className="container container--medium">

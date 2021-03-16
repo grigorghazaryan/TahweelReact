@@ -31,6 +31,7 @@ class HomeCarousel extends Component {
                                     <p>{item.description}</p>
                                 </div>
                                 <div className="banner__link">
+                                    {/*item.category.pdf_path?*/}
                                     <a href={constants.urls.UPLOAD+item.category.pdf_path}>VIEW CATALOGUE</a>
                                     <a href={item.category.link}>LEARN MORE</a>
                                 </div>

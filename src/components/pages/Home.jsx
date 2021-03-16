@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import { Image } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
-
+// import loader from '../../img/Media/loader.png';
+// import Image02 from '../../img/Media/loader.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import HomeCarousel from '../global/HomeCarousel'
@@ -146,7 +147,11 @@ class Home extends Component {
             </div>
         ))
         if (!this.state.isLoaded) {
-            return <div className="loader"></div>
+            return <div className="loader">
+                <div className="spinner-border" role="status">
+                    <span className="sr-only">Loading...</span>
+                </div>
+            </div>
         }
 
         return (

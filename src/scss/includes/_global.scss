@@ -27,6 +27,17 @@ img{
 .white--line{
     border-top: 3px solid #ffffff;
 }
+.loader{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .spinner-border{
+        width: 3rem;
+        height: 3rem;
+    }
+}
 @media only screen and (min-width: 1800px) {
     .container{
         &--max{

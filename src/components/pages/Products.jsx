@@ -12,6 +12,7 @@ class Products extends Component {
         super(props)
         this.state = {
             url: [],
+            isLoaded: false,
             categories:[]
         }
         AOS.init({
@@ -35,6 +36,7 @@ class Products extends Component {
         })
             .then( result =>{
                 this.setState({
+                    isLoaded: true,
                     categories: result.category
                 })
             })
@@ -63,6 +65,13 @@ class Products extends Component {
                 </div>
             </div>
         ))
+        if (!this.state.isLoaded) {
+            return <div className="loader">
+                <div className="spinner-border" role="status">
+                    <span className="sr-only">Loading...</span>
+                </div>
+            </div>
+        }
     return(
         <div className="products--page overflow--hidden">
             <div className="container container--medium products--page__categories">

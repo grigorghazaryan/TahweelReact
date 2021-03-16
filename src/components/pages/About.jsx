@@ -16,6 +16,7 @@ class About extends Component {
         super(props)
         this.state = {
             url: [],
+            isLoaded: false,
             state: [],
             overview: [],
             integreted: [],
@@ -102,6 +103,7 @@ class About extends Component {
                         }
                     }
                 })
+                newState.isLoaded = true;
                 this.setState( newState );
             })
                 .catch( err => {
@@ -326,6 +328,13 @@ class About extends Component {
 
                 </div>
             ))
+            if (!this.state.isLoaded) {
+                return <div className="loader">
+                    <div className="spinner-border" role="status">
+                        <span className="sr-only">Loading...</span>
+                    </div>
+                </div>
+            }
             return (
         <div className="about">
             <div className="about--overview overflow--hidden">

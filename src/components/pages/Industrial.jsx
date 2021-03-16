@@ -33,6 +33,7 @@ function SamplePrevArrow(props) {
 function Industrial(props){
     const id = props.match.params.id;
     const url = `${constants.urls.API}/getProductsByCategory/${id}`;
+    const isLoaded = false;
 
     const [isActiveCollapse, setActiveCollapse] = useState({
         0: false,
@@ -88,6 +89,7 @@ function Industrial(props){
                     }
                 }
             })
+            newState.isLoaded = true;
             setData( newState );
         })
             .catch( err => {
@@ -142,6 +144,13 @@ function Industrial(props){
     }
 
     console.log(data);
+    /*if (isLoaded) {
+        return <div className="loader">
+            <div className="spinner-border" role="status">
+                <span className="sr-only">Loading...</span>
+            </div>
+        </div>
+    }*/
     return (
         <div className="products--category overflow--hidden">
 

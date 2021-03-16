@@ -11,6 +11,7 @@ class Contact extends Component {
         this.state = {
             url: [],
             state: [],
+            isLoaded: false,
             career: [],
             contact: [],
 
@@ -57,6 +58,7 @@ class Contact extends Component {
                     }
                 }
             })
+            newState.isLoaded = true;
             this.setState( newState );
         })
             .catch( err => {
@@ -65,6 +67,7 @@ class Contact extends Component {
                 /* scroll animation end */
             })
     }
+
     render() {
 
         const career = this.state.career.map(( item, i ) => (
@@ -122,6 +125,13 @@ class Contact extends Component {
             </div>
 
         ))
+        if (!this.state.isLoaded) {
+            return <div className="loader">
+                <div className="spinner-border" role="status">
+                    <span className="sr-only">Loading...</span>
+                </div>
+            </div>
+        }
     return(
         <div className="contact overflow--hidden">
             <div className="contact__info">
