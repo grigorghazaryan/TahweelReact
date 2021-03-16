@@ -135,6 +135,20 @@ function Industrial(props){
     function getProductById(id){
         for(let v in data?.products) {
             if (id == data?.products[v].id) {
+                // remove active class from all products
+                let tablinks = document.getElementsByClassName("products--category__main__slider__content");
+                for (let i = 0; i < tablinks.length; i++) {
+                  tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+
+                // add active class to clicked element
+                let overlay = document.getElementsByClassName("products--category__main__slider__content--"+id);
+                    console.log("overlay", overlay);
+                for (let i=0; i<overlay.length; i++) {
+                    overlay.item(i).classList.add('active');
+                }
+                
+
                 return data?.products[v];
             }
         }
@@ -162,7 +176,7 @@ function Industrial(props){
                                 <div className="products--category__main__item">
                                     {data?.products.map(function(item, i){
                                         return <div key={"product-item-" + item.id} onClick={() => setSelectedProduct(getProductById(item.id))}>
-                                            <div className="products--category__main__slider__content ">
+                                            <div className={`products--category__main__slider__content products--category__main__slider__content--${item.id}`}>
                                                 <div>
                                                     <div className="products--category__main__slider__content__img ">
                                                         <Image src={constants.urls.UPLOAD + item.logo}/>
@@ -181,7 +195,7 @@ function Industrial(props){
                                         className="products--category__main__slider products--category__main__slider--industrial">
                                     {data?.products.map(function(item, i){
                                         return <div key={"product-item-" + item.id} onClick={() => setSelectedProduct(getProductById(item.id))}>
-                                            <div className="products--category__main__slider__content active">
+                                            <div className={`products--category__main__slider__content products--category__main__slider__content--${item.id}`}>
                                                 <div>
                                                     <div className="products--category__main__slider__content__img ">
                                                         <Image src={constants.urls.UPLOAD + item.logo}/>
@@ -194,7 +208,7 @@ function Industrial(props){
                                         </div>
                                     })}
                                 </Slider>
-                                }
+                                } 
                             </div>
                         </div>
                     </div>
