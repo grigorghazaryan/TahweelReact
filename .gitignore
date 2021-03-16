@@ -10,7 +10,7 @@
 
 # production
 
-/helpers/constants.js
+/src/helpers/constants.js
 # misc
 .DS_Store
 .env.local
