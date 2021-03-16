@@ -8,6 +8,57 @@
         &__categories{
             &__col{
                 margin-bottom: 60px;
+                &:first-child{
+                    .products--page__categories__content{
+                        &__line{
+                            border-color: #005F83;
+                        }
+                        &:hover{
+                            a{                            
+                                border-color: rgba(0, 90, 128, 0.75);
+                            }
+                        }
+                    }
+                }
+                &:nth-child(2){
+                    .products--page__categories__content{
+                        &__line{
+                            border-color: #71C8EF;
+                        }
+                        &:hover{
+                            a{                            
+                                border-color: rgba(80, 183, 224, 0.75);
+                            }
+                        } 
+                    }
+                }
+                &:nth-child(3){
+                    .products--page__categories__content{
+                        &__line{
+                            border-color: #8BAF44;
+                        }
+                        &:hover{
+                            a{
+                                border-color: rgba(140, 176, 68, 0.75);
+                            }
+                        }
+                        .page--title{
+                            margin-top: 66px;
+                        }
+                    }
+                }
+                &:nth-child(4){
+                    .products--page__categories__content{
+                        &__line{
+                            border-color: #008D45;
+                        }
+                        &:hover{
+                            a{
+                                border-color: rgba(0, 142, 69, 0.75);
+                            }
+                        }
+                    }
+                }
             }
             
             &__content{

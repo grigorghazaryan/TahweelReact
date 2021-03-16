@@ -1744,6 +1744,42 @@ body {
   margin-bottom: 60px;
 }
 
+.products--page__categories__col:first-child .products--page__categories__content__line {
+  border-color: #005F83;
+}
+
+.products--page__categories__col:first-child .products--page__categories__content:hover a {
+  border-color: rgba(0, 90, 128, 0.75);
+}
+
+.products--page__categories__col:nth-child(2) .products--page__categories__content__line {
+  border-color: #71C8EF;
+}
+
+.products--page__categories__col:nth-child(2) .products--page__categories__content:hover a {
+  border-color: rgba(80, 183, 224, 0.75);
+}
+
+.products--page__categories__col:nth-child(3) .products--page__categories__content__line {
+  border-color: #8BAF44;
+}
+
+.products--page__categories__col:nth-child(3) .products--page__categories__content:hover a {
+  border-color: rgba(140, 176, 68, 0.75);
+}
+
+.products--page__categories__col:nth-child(3) .products--page__categories__content .page--title {
+  margin-top: 66px;
+}
+
+.products--page__categories__col:nth-child(4) .products--page__categories__content__line {
+  border-color: #008D45;
+}
+
+.products--page__categories__col:nth-child(4) .products--page__categories__content:hover a {
+  border-color: rgba(0, 142, 69, 0.75);
+}
+
 .products--page__categories__content {
   height: 100%;
 }
@@ -1923,6 +1959,7 @@ body {
 .products--category__main__slider__content__img img {
   height: auto;
   max-width: 100%;
+  width: 100%;
 }
 
 .products--category__main__slider__content__img::before {

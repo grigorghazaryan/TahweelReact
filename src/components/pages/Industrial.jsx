@@ -1,20 +1,20 @@
 import {React, useState, setStatus, useEffect} from 'react';
 import { Image, Tab, Tabs, Collapse } from 'react-bootstrap';
-import Handroll from '../../img/Product-category/IndustrialSolutions/222Handroll.jpg';
-import img1 from '../../img/Product-category/IndustrialSolutions/111.jpg';
-import img2 from '../../img/Product-category/IndustrialSolutions/333.jpg';
-import img3 from '../../img/Product-category/IndustrialSolutions/4444.jpg';
-import img4 from '../../img/Product-category/IndustrialSolutions/5555.jpg';
+// import Handroll from '../../img/Product-category/IndustrialSolutions/222Handroll.jpg';
+// import img1 from '../../img/Product-category/IndustrialSolutions/111.jpg';
+// import img2 from '../../img/Product-category/IndustrialSolutions/333.jpg';
+// import img3 from '../../img/Product-category/IndustrialSolutions/4444.jpg';
+// import img4 from '../../img/Product-category/IndustrialSolutions/5555.jpg';
 import arrowUp from '../../img/Product-category/arrow-up.svg';
 import arrowDown from '../../img/Product-category/arrow-down.svg';
-import image from '../../img/Product-category/AvialablePossibilities.png';
+// import image from '../../img/Product-category/AvialablePossibilities.png';
 import Slider from "react-slick";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import constants from "../../helpers/constants";
-import {forEach} from "react-bootstrap/ElementChildren";
+// import {forEach} from "react-bootstrap/ElementChildren";
 
 function SampleNextArrow(props) {
     const { onClick } = props;
@@ -137,22 +137,37 @@ function Industrial(props){
     function getProductById(id){
         for(let v in data?.products) {
             if (id == data?.products[v].id) {
+                // remove active class from all products
+                let removeProductClass = document.getElementsByClassName("products--category__main__slider__content");
+                for (let i = 0; i < removeProductClass.length; i++) {
+                    removeProductClass[i].className = removeProductClass[i].className.replace(" active", "");
+                }
+
+                // add active class to clicked element
+                let productActiveClass = document.getElementsByClassName("products--category__main__slider__content--"+id);
+                for (let i=0; i<productActiveClass.length; i++) {
+                    productActiveClass.item(i).classList.add('active');
+                }
+
+
                 return data?.products[v];
             }
         }
         return null;
     }
 
-    console.log(data);
-    /*if (isLoaded) {
-        return <div className="loader">
-            <div className="spinner-border" role="status">
-                <span className="sr-only">Loading...</span>
-            </div>
-        </div>
-    }*/
+    // add class for every category so we can change color of them
+    let categoryClass = "";
+    if(data && data.category.id===2){
+        categoryClass = "packaging";
+        console.log('cat-id' , data.category.id);
+    }else if(data && data.category.id===3){
+        categoryClass = "agriculture";
+        console.log('cat-id' , data.category.id);
+    }
+
     return (
-        <div className="products--category overflow--hidden">
+        <div className={`products--category overflow--hidden ${categoryClass}`}>
 
             <div className="products--category__main">
                 <div data-aos="fade-right" data-aos-duration="1000">
@@ -171,7 +186,7 @@ function Industrial(props){
                                 <div className="products--category__main__item">
                                     {data?.products.map(function(item, i){
                                         return <div key={"product-item-" + item.id} onClick={() => setSelectedProduct(getProductById(item.id))}>
-                                            <div className="products--category__main__slider__content ">
+                                            <div className={`products--category__main__slider__content products--category__main__slider__content--${item.id}`}>
                                                 <div>
                                                     <div className="products--category__main__slider__content__img ">
                                                         <Image src={constants.urls.UPLOAD + item.logo}/>
@@ -190,7 +205,7 @@ function Industrial(props){
                                         className="products--category__main__slider products--category__main__slider--industrial">
                                     {data?.products.map(function(item, i){
                                         return <div key={"product-item-" + item.id} onClick={() => setSelectedProduct(getProductById(item.id))}>
-                                            <div className="products--category__main__slider__content active">
+                                            <div className={`products--category__main__slider__content products--category__main__slider__content--${item.id}`}>
                                                 <div>
                                                     <div className="products--category__main__slider__content__img ">
                                                         <Image src={constants.urls.UPLOAD + item.logo}/>

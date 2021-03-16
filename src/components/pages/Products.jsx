@@ -56,7 +56,7 @@ class Products extends Component {
                             <h1 className=" page--title products--page__categories__content__title">
                                 <span>{item.name}</span>
                             </h1>
-                            <hr className="page--title__line products--page__categories__content--industries__line" />
+                            <hr className="page--title__line products--page__categories__content__line products--page__categories__content--industries__line" />
                             <p className="text--content products--page__categories__content__text">
                                 { item.description }
                             </p>
