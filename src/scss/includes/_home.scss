@@ -121,54 +121,64 @@
         object-fit: cover;
     }
 }
-.slide-3  .banner{
-    &__text{
-        background: rgba(1, 107, 50, 0.82);
-        &::before{
-            border-color: #91B544;
-        }
-    }
-    &__link{
-        a{
-            &:hover {
-                background: #91B544;
-                border-color: #91B544;
+
+.slide{
+    &:nth-child(2){
+        .banner{
+            &__text{
+                background: rgba(0, 83, 129, 0.82);
+                &::before{
+                    border-color: #50BCE5;
+                }
+            }
+            &__link{
+                a{
+                    &:hover {
+                        background: #50BCE5;
+                        border-color: #50BCE5;
+                    }
+                }
             }
         }
     }
-}
-.slide-1  .banner{
-    &__text{
-        background: rgba(0, 83, 129, 0.82);
-        &::before{
-            border-color: #50BCE5;
-        }
-    }
-    &__link{
-        a{
-            &:hover {
-                background: #50BCE5;
-                border-color: #50BCE5;
+    &:nth-child(3){
+        .banner{
+            &__text{
+                background: rgba(103, 165, 99, 0.82);
+                &::before{
+                    border-color: #009345;
+                }
             }
-        }
-    }
-}
-.slide-2  .banner{
-    &__text{
-        background: rgba(103, 165, 99, 0.82);
-        &::before{
+            &__link{
+                a{
+                    &:hover {
+                        background: #009345;
             border-color: #009345;
+                    }
+                }
+            }
         }
     }
-    &__link{
-        a{
-            &:hover {
-                background: #009345;
-    border-color: #009345;
+    &:nth-child(4){
+        .banner{
+            &__text{
+                background: rgba(1, 107, 50, 0.82);
+                &::before{
+                    border-color: #91B544;
+                }
+            }
+            &__link{
+                a{
+                    &:hover {
+                        background: #91B544;
+                        border-color: #91B544;
+                    }
+                }
             }
         }
     }
 }
+  
 
 .home--about{
     position: relative;
@@ -245,11 +255,13 @@
                 max-width: 100px;
                 margin-left: 0;
                 margin-top: 0;
+                margin-bottom: 60px;
             }
             &__text{
                 font-family: GothamMediumRegular;
                 font-size: 16px;
                 padding-left: 30px;
+                margin-bottom: 47px;
             }
             
             &__link{

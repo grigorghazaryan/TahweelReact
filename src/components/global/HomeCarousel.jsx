@@ -20,7 +20,7 @@ class HomeCarousel extends Component {
         //console.log(this.state.sliders);
         const sliders = this.props.sliders.map((item, i) => (
 
-            <Carousel.Item key={i} className="slide-1">
+            <Carousel.Item key={i} className="slide">
                 <Image src={constants.urls.UPLOAD + item.path} className="d-block w-100 banner__img" alt="slide"/>
                 <Carousel.Caption>
                     <div className="container container--max">
