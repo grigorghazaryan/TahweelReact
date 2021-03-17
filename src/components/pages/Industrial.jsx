@@ -279,9 +279,8 @@ function Industrial(props){
                                         </div>
 
                                         <Collapse in={isActiveCollapse[i]}>
-                                            <div
-                                                className="products--category__info__collapse--content__info example-collapse-text1">
-                                                    <p className="products--category__info__collapse--content__info__description">{item.description?item.description:''}</p>
+                                            <div className="products--category__info__collapse--content__info example-collapse-text1">
+                                                    <p className="products--category__info__collapse--content__info__description">{item.description}</p>
                                                 <ul>
                                                     {item.product_list_items?.map(function(listItem, i){
                                                         return <li><span>{listItem.name}</span></li>
