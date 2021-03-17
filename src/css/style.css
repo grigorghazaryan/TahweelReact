@@ -2193,6 +2193,14 @@ body {
   display: inline;
 }
 
+.products--category__info__collapse--content__info__description {
+  font-size: 18px;
+  line-height: 22px;
+  padding-left: 25px;
+  color: #005A80;
+  font-family: GothamMediumRegular;
+}
+
 .products--category__info__collapse--content__info ul {
   list-style-type: none;
   padding-left: 25px;
@@ -2327,6 +2335,11 @@ body {
   .products--category__info__collapse--content__button p {
     font-size: 36px;
     margin-bottom: 0;
+  }
+  .products--category__info__collapse--content__info__description {
+    font-size: 22px;
+    line-height: 43px;
+    padding-left: 65px;
   }
   .products--category__info__collapse--content__info ul {
     padding-left: 65px;

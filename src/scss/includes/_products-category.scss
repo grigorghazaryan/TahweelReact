@@ -320,6 +320,13 @@
                     
                         
                     &__info{
+                        &__description{
+                            font-size: 18px;
+                            line-height: 22px;
+                            padding-left: 25px;
+                            color: #005A80;
+                            font-family: GothamMediumRegular;
+                        }
                         ul{
                             list-style-type: none;
                             padding-left: 25px;
@@ -502,6 +509,11 @@
                             }
                         }
                         &__info{
+                            &__description{
+                                font-size: 22px;
+                                line-height: 43px;
+                                padding-left: 65px;
+                            }
                             ul{
                                 padding-left: 65px;
                                 margin-bottom: 38px;

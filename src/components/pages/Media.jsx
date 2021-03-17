@@ -155,7 +155,7 @@ class Media extends Component {
                                 <div className="row">
                                     <div className="col-md-9">
                                         <h2 className="media--slider__bottom__info__title">
-                                            { this.state.openedItem ? this.state.openedItem.title : `` }
+                                            { this.state.openedItem ? this.state.openedItem.details_title : `` }
                                         </h2>
                                     </div>
                                     <div className="col-md-3">
@@ -165,7 +165,7 @@ class Media extends Component {
                                     </div>
                                     <div className="col-md-9">
                                         <p className="media--slider__bottom__info__text">
-                                               { this.state.openedItem ? this.state.openedItem.description : `` }
+                                               { this.state.openedItem ? this.state.openedItem.details_description : `` }
                                         </p>
                                     </div>
                                 </div>
