@@ -35,7 +35,7 @@ class HomeCarousel extends Component {
                                     <a target='_blank' href={item.link_web}>VIEW WEBSITE</a>
                                     }
                                     {item.title != '[Pipes]' &&
-                                    <a href={constants.urls.UPLOAD + item.pdf_path}>VIEW CATALOGUE</a>
+                                    <a target='_blank' href={constants.urls.UPLOAD + item.pdf_path}>VIEW CATALOGUE</a>
                                     }
                                     <a href={item.link}>LEARN MORE</a>
                                 </div>
